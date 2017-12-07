@@ -1,2 +1,287 @@
-.print {
-  width: 50%; }
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif; }
+
+section {
+  display: block; }
+
+p {
+  margin: 0; }
+
+/* end - normalize css */
+.foobar {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: black;
+  color: white;
+  background: linear-gradient(to right bottom, black, white);
+  position: relative; }
+  .foobar:before, .foobar:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); }
+  .foobar:after {
+    z-index: 1;
+    bottom: 50px;
+    border-top: 25px solid white;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent; }
+  .foobar:before {
+    z-index: 2;
+    bottom: 55px;
+    border-top: 20px solid black;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent; }
+
+.foo {
+  height: 100vh;
+  background: gray;
+  color: white;
+  padding: 20px; }
+  .foo__nav {
+    background: white;
+    padding: 20px;
+    text-align: center; }
+  .foo__section {
+    background: white;
+    padding: 20px; }
+    .foo__section--secondary {
+      background: white;
+      padding: 20px; }
+    .foo__section--inline-block-center {
+      text-align: center; }
+    .foo__section--flex-center {
+      display: flex;
+      justify-content: center; }
+  .foo__section-inner {
+    background: gray;
+    margin: 0 auto;
+    width: 200px;
+    padding: 20px; }
+
+.nav__text {
+  color: white;
+  text-decoration: none;
+  background: gray;
+  padding: 5px 10px;
+  border-radius: 5px; }
+
+.inline-block-center__division {
+  display: inline-block;
+  max-width: 200px;
+  background: gray;
+  padding: 20px;
+  margin: 0 3px; }
+
+.flex-center__division {
+  width: 200px;
+  max-width: 200px;
+  background: gray;
+  margin: 0 5px;
+  padding: 20px; }
+
+.normal-center__division {
+  background: gray;
+  padding: 10px;
+  margin: 5px auto;
+  text-align: center; }
+  .normal-center__division:nth-child(1) {
+    width: 300px; }
+  .normal-center__division:nth-child(2) {
+    width: 900px; }
+  .normal-center__division:nth-child(3) {
+    width: 600px; }
+
+.bar {
+  background: black;
+  color: white;
+  padding: 20px; }
+  .bar__nav {
+    background: white;
+    padding: 20px;
+    text-align: center; }
+  .bar__nav-item {
+    text-decoration: none;
+    background: black;
+    padding: 10px 20px;
+    color: white;
+    margin: 0 3px; }
+  .bar__section {
+    background: white;
+    padding: 20px;
+    margin-top: 20px; }
+    .bar__section--secondary {
+      background: white;
+      padding: 20px;
+      margin-top: 20px; }
+    .bar__section--third {
+      background: white;
+      margin-top: 20px;
+      padding: 20px;
+      height: 200px;
+      min-height: 100px;
+      max-height: 300px;
+      resize: vertical;
+      overflow: auto;
+      font-size: 0; }
+      .bar__section--third:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+        width: 1px;
+        background: black; }
+  .bar__section-innner {
+    background: black;
+    text-align: center;
+    height: 100px;
+    line-height: 100px; }
+  .bar__parent {
+    background: white;
+    padding: 20px;
+    height: 300px;
+    min-height: 200px;
+    max-height: 400px;
+    position: relative;
+    resize: vertical;
+    overflow: auto; }
+    .bar__parent--secondary {
+      background: white;
+      height: 200px;
+      min-height: 150px;
+      max-height: 350px;
+      padding: 20px;
+      position: relative;
+      resize: vertical;
+      overflow: auto; }
+    .bar__parent--third {
+      background: white;
+      padding: 20px;
+      height: 300px;
+      min-height: 200px;
+      max-height: 400px;
+      resize: vertical;
+      overflow: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  .bar__child {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    margin-top: -50px;
+    height: 100px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px; }
+
+.section-secondary__inner {
+  height: 200px;
+  min-height: 200px;
+  max-height: 400px;
+  padding: 20px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  resize: vertical;
+  overflow: auto; }
+
+.section-third__text {
+  font-size: initial;
+  display: inline-block;
+  vertical-align: middle;
+  background: black;
+  padding: 20px; }
+
+.parent-secondary__child {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  transform: translateY(-50%);
+  background: black;
+  padding: 20px;
+  resize: vertical;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+
+.parent-third__child {
+  background: black;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.bob {
+  height: 100vh;
+  background: gray;
+  padding: 20px;
+  color: white; }
+  .bob__content--first {
+    background: white;
+    padding: 20px;
+    position: relative;
+    height: 400px;
+    min-height: 300px;
+    max-height: 100vh;
+    resize: vertical;
+    overflow: auto; }
+  .bob__content--second {
+    background: white;
+    margin-top: 20px;
+    padding: 20px;
+    position: relative;
+    height: 400px; }
+
+.content-first__inner {
+  width: 400px;
+  height: 200px;
+  background: gray;
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -200px;
+  font-size: 0; }
+  .content-first__inner:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle; }
+  .content-first__inner p {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: initial;
+    width: 100%;
+    text-align: center; }
+
+.content-second__inner {
+  background: gray;
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  resize: vertical;
+  overflow: auto; }

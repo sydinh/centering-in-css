@@ -3,15 +3,118 @@
 
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Centering in CSS</title>
   <!--build:css css/styles.min.css-->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/print.css">
   <!--endbuild-->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 
 <body>
-  <h1>Hello world!</h1>
+  <section class="foobar">
+    <h1>Horizontally</h1>
+    <h1>Vertically</h1>
+    <h1>Both Horizontally and Vertically</h1>
+  </section>
+
+  <section class="foo">
+    <hgroup class="foo__group-heading">
+      <h1>Horizontally</h1>
+      <h4> > Is it inline or inline-* elements (like text or links)?</h4>
+    </hgroup>
+    <nav class="foo__nav" role="navigation">
+      <a class="nav__text" href="#0">Foo</a>
+      <a class="nav__text" href="#0">Bar</a>
+      <a class="nav__text" href="#0">Foobar</a>
+    </nav>
+
+    <h4> > Is it a block level element?</h4>
+    <section class="foo__section">
+      <div class="foo__section-inner">
+        <p>Center me!</p>
+      </div>
+    </section>
+
+    <h4> > Is there more than one block level element?</h4>
+    <section class="foo__section--secondary">
+      <section class="foo__section--inline-block-center">
+        <div class="inline-block-center__division">Lorem ipsum dolor sit amet.</div>
+        <div class="inline-block-center__division">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, amet?</div>
+        <div class="inline-block-center__division">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta pariatur aperiam placeat libero. Praesentium, quae?</div>
+      </section>
+      <hr />
+      <section class="foo__section--flex-center">
+        <div class="flex-center__division">Lorem ipsum dolor sit amet.</div>
+        <div class="flex-center__division">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, amet?</div>
+        <div class="flex-center__division">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta pariatur aperiam placeat libero. Praesentium, quae?</div>
+      </section>
+      <hr />
+      <section class="foo__section--normal-center">
+        <div class="normal-center__division">Lorem ipsum dolor sit amet.</div>
+        <div class="normal-center__division">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, soluta!</div>
+        <div class="normal-center__division">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam labore magnam distinctio earum animi modi.</div>
+      </section>
+    </section>
+  </section>
+
+  <section class="bar">
+    <h1>Vertically</h1>
+    <h4> > Is it inline or inline-* elements (like text or links)?</h4>
+    <h6> >> Is it a single line?</h6>
+    <nav class="bar__nav">
+      <a class="bar__nav-item" href="#0">Foo</a>
+      <a class="bar__nav-item" href="#0">Bar</a>
+      <a class="bar__nav-item" href="#0">Foobar</a>
+    </nav>
+    <section class="bar__section">
+      <div class="bar__section-innner">
+        Center me!
+      </div>
+    </section>
+    <section class="bar__section--secondary">
+      <div class="section-secondary__inner">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta beatae reiciendis est numquam cum ratione aliquid repellendus quo quibusdam iusto, natus nesciunt eius laboriosam recusandae perferendis cupiditate sint odit! Illum voluptas delectus natus obcaecati totam deleniti perspiciatis. Dicta optio eos illum aliquam debitis labore rerum culpa nihil sunt iure unde quae velit tempora et, repellat consequuntur vero dolorem architecto beatae nulla, voluptates libero non praesentium. Ad dolores placeat nesciunt temporibus eligendi vitae error quas consequuntur magni architecto consequatur, aspernatur nihil atque quibusdam? Quis similique consequatur suscipit fuga, excepturi eligendi beatae repudiandae magnam voluptates eum ratione libero aperiam sit quibusdam quae!</p>
+      </div>
+    </section>
+    <section class="bar__section--third">
+      <p class="section-third__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, tenetur!</p>
+    </section>
+    <h4> > Is it a block-level element?</h4>
+    <h6> >> Do you know the height of the element?</h6>
+    <section class="bar__parent">
+      <div class="bar__child">
+        <p>Center block & text !</p>
+      </div>
+    </section>
+    <h6> >> Is the element of unknown height?</h6>
+    <section class="bar__parent--secondary">
+      <div class="parent-secondary__child">
+        <p>Center me !</p>
+      </div>
+    </section>
+    <h6> >> Can you use flexbox?</h6>
+    <section class="bar__parent--third">
+      <div class="parent-third__child">
+        <p>Center me !</p>
+      </div>
+    </section>
+  </section>
+  <section class="bob">
+    <h1>Both Horizontally and Vertically</h1>
+    <h4> > Is the element of fixed width and height?</h4>
+    <section class="bob__content--first">
+      <div class="content-first__inner">
+        <p>Center me !</p>
+      </div>
+    </section>
+    <h4> > Is the element of unknown width and height?</h4>
+    <section class="bob__content--second">
+      <div class="content-second__inner">
+        <p>Center me !</p>
+      </div>
+    </section>
+  </section>
 
   <!--build:js js/main.min.js -->
   <script src="js/lib/a-library.js"></script>
